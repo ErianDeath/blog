@@ -479,6 +479,9 @@ img{
 }
 
 .mobile-menu .logo {
+	max-width: 100%;
+	height: auto;
+	width: 50px;
     position: absolute;
     left: 0;
     top: 0;
@@ -782,6 +785,92 @@ img{
 	color: #555555;
 	font-weight: 300;
 	margin-top: 15px;
+}
+
+/* About Block: Flexbox 布局 */
+.about-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box; /* 确保所有元素的宽度计算包含内边距和边框 */
+	align-items: stretch;
+}
+
+/* Design Block: 占1列，使用列布局 */
+.design-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1; /* 占据 1 列宽度 */
+    box-sizing: border-box;
+}
+
+.design-row {
+    display: flex;
+    flex-direction: row; /* 行内元素水平排列 */
+	gap: 10px; /* 元素之间的间距 */
+    flex: 1; /* 占据全部宽度 */
+}
+
+.design-item {
+	display: flex;
+	align-items: center; /* 垂直居中对齐 */
+	justify-content: left;
+	flex-direction: row; 
+	gap: 10px; /* 元素之间的间距 */
+    flex: 1; /* 占据全部宽度 */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Code Block: 占3列，使用列布局 */
+.code-block {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* 行之间的间距 */
+    flex: 2;
+    box-sizing: border-box;
+	align-items: start;
+}
+
+.code-column {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	flex: 2;
+}
+
+.code-item {
+	display: flex;
+	align-items: center; /* 垂直居中对齐 */
+	justify-content: left;
+	flex-direction: row; /* 列内元素垂直排列 */
+	gap: 10px; /* 元素之间的间距 */
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+}
+
+/* 图片样式：统一大小的 logo */
+.design-item img, .code-item img {
+    width: 40px; /* 缩小图片宽度 */
+    height: 40px; /* 缩小图片高度 */
+    margin-right: 10px; /* 图片和文字之间的间距 */
+}
+
+/* Block Title 样式 */
+.block-title {
+    color: #222;
+	text-align: left;
+}
+
+/* 清除浮动（如果有浮动） */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 
